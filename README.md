@@ -9,6 +9,7 @@ Uma aplicação web premium, responsiva e dinâmica construída para mapear visu
 - **Core**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) + [Vite](https://vite.dev/)
 - **Estilização**: [Tailwind CSS v4](https://tailwindcss.com/) (Layout responsivo e variáveis CSS de tema escuro)
 - **Animações**: [GSAP](https://greensock.com/gsap/) + [ScrollTrigger](https://greensock.com/scrolltrigger/) (Animações de entrada no scroll e efeito hover interativo 3D nos cartões)
+- **Background**: [HTML5 Canvas 2D/3D](https://developer.mozilla.org/pt-BR/docs/Web/API/Canvas_API) com ondas dinâmicas e constelações interativas
 - **Ícones**: [Lucide React](https://lucide.dev/)
 - **Linter**: [Oxlint](https://oxc.rs/docs/guide/usage/linter/introduction.html)
 
@@ -19,23 +20,32 @@ Uma aplicação web premium, responsiva e dinâmica construída para mapear visu
 O projeto é organizado na seguinte estrutura de pastas. Cada pasta contém seu próprio arquivo `README.md` com explicações específicas:
 
 ```
-├── public/                 # Ativos estáticos globais (favicon, etc.)
+├── excluir/                # Pasta de quarentena com arquivos não utilizados
 │   └── README.md
-├── src/                    # Código-fonte da aplicação
-│   ├── assets/             # Recursos de mídia otimizados pela build
+├── public/                 # Ativos estáticos globais (favicon, vídeos web)
+│   ├── assets/videos/
+│   │   └── README.md
+│   └── README.md
+├── src/                    # Código-fonte ativo da aplicação
+│   ├── assets/             # Recursos processados pelo bundler
+│   │   ├── videos/
+│   │   │   └── README.md
 │   │   └── README.md
 │   ├── components/         # Componentes React modulares
 │   │   └── README.md
-│   ├── data/               # Arquivos de dados estáticos da linha do tempo
+│   ├── data/               # Dados históricos e cronologia da IA
 │   │   └── README.md
-│   ├── styles/             # Estilos globais e folha do Tailwind v4
+│   ├── styles/             # Folha de estilos e Tailwind v4
 │   │   └── README.md
-│   ├── App.tsx             # Layout estrutural e luzes do container raiz
+│   ├── App.tsx             # Layout estrutural e montagem das dobras
 │   ├── main.tsx            # Bootstrap React e tratamento de erros
 │   └── README.md
+├── .env.example            # Exemplo de variáveis de ambiente
+├── .gitignore              # Regras de exclusão do Git
+├── .oxlintrc.json          # Configuração do linter Oxlint
 ├── package.json            # Dependências e scripts npm
 ├── tsconfig.json           # Configuração raiz do TypeScript
-└── vite.config.ts          # Arquivo de configuração do bundler Vite
+└── vite.config.ts          # Configuração do Vite
 ```
 
 ---

@@ -21,3 +21,7 @@ pnpm-debug.log*
 .vscode/
 .idea/
 .gemini/
+
+# Ignorar saídas de build
+dist/
+dist-ssr/
