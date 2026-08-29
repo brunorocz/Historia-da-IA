@@ -38,6 +38,18 @@
   }
 }
 
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @layer utilities {
   .glass {
     background: var(--glass-bg);
@@ -50,5 +62,11 @@
   /* Antigravity floating shadow */
   .shadow-antigravity {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  }
+
+  /* Gradiente animado vivo para textos e badges */
+  .animate-gradient-flow {
+    background-size: 200% 200%;
+    animation: gradient-flow 6s ease infinite;
   }
 }
