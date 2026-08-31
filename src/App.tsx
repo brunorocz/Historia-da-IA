@@ -2,6 +2,7 @@ import { HeroSection } from './components/HeroSection';
 import { Timeline } from './components/Timeline';
 import { Footer } from './components/Footer';
 import { InteractiveWaveBackground } from './components/InteractiveWaveBackground';
+import { ChloeCompanion } from './components/ChloeCompanion';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         <div id="timeline" className="flex-grow pt-12">
           <Timeline />
         </div>
+
+        {/* ASSISTENTE VIRTUAL HOLOGRÁFICO FIXO (CHLOE DETROIT: BECOME HUMAN) */}
+        <ChloeCompanion />
 
         {/* RODAPÉ COM ASSINATURA E GRADIENTE */}
         <Footer />
